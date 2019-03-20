@@ -65,21 +65,32 @@ class InfBall(DualObject):
         return -nu_x - l1
 
 class InfBallBounded(DualObject):
-    def __init__(self, X, epsilon, l=0, u=1): 
+    def __init__(self, X, epsilon, l=0, u=1, nu_1=None, nu_x=None): 
         super(InfBallBounded, self).__init__()
-        self.epsilon = epsilon
-        self.l = (X-epsilon).clamp(min=l).view(X.size(0), 1, -1)
-        self.u = (X+epsilon).clamp(max=u).view(X.size(0), 1, -1)
+        if nu_1 is None:
+            self.epsilon = epsilon
+            self.l = (X-epsilon).clamp(min=l).view(X.size(0), 1, -1)
+            self.u = (X+epsilon).clamp(max=u).view(X.size(0), 1, -1)
 
-        n = X[0].numel()
-        self.nu_x = [X] 
-        self.nu_1 = [X.new(n,n)]
-        torch.eye(n, out=self.nu_1[0])
-        self.nu_1[0] = self.nu_1[0].view(-1,*X.size()[1:]).unsqueeze(0)
+            n = X[0].numel()
+            self.nu_x = [X] 
+            self.nu_1 = [X.new(n,n)]
+            torch.eye(n, out=self.nu_1[0])
+            self.nu_1[0] = self.nu_1[0].view(-1,*X.size()[1:]).unsqueeze(0)
+            self.X = X
+
+        else:
+            self.l = l
+            self.u = u
+            self.nu_1 = nu_1
+            self.nu_x = nu_x
+            
 
     def apply(self, dual_layer): 
         self.nu_x.append(dual_layer(*self.nu_x))
         self.nu_1.append(dual_layer(*self.nu_1))
+        #print("InfBallBounded nu_x: ", len(self.nu_x))
+        #print("InfBallBounded nu_1: ", len(self.nu_1))
 
     def bounds(self, network=None): 
         if network is None: 

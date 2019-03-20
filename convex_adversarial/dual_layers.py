@@ -39,19 +39,26 @@ def unbatch(A):
     return A.view(-1, *A.size()[2:])
 
 class DualLinear(DualLayer): 
-    def __init__(self, layer, out_features): 
+    def __init__(self, layer, out_features, bias=None): 
         super(DualLinear, self).__init__()
-        if not isinstance(layer, nn.Linear):
-            raise ValueError("Expected nn.Linear input.")
-        self.layer = layer
-        if layer.bias is None: 
-            self.bias = None
-        else: 
-            self.bias = [full_bias(layer, out_features[1:])]
+        if bias is None:
+            if not isinstance(layer, nn.Linear):
+                raise ValueError("Expected nn.Linear input.")
+            self.layer = layer
+            self.out_features = out_features
+            if layer.bias is None: 
+                self.bias = None
+            else: 
+                self.bias = [full_bias(layer, out_features[1:])]
+        else:
+            self.layer = layer
+            self.bias = bias
+            self.out_features= out_features
 
     def apply(self, dual_layer): 
         if self.bias is not None: 
             self.bias.append(dual_layer(*self.bias))
+        #print("Dual_linear bias: ",len(self.bias))
 
     def bounds(self, network=None):
         if self.bias is None: 
@@ -106,15 +113,21 @@ def conv_transpose2d(x, *args, **kwargs):
     return torch.cat(out, 0)
 
 class DualConv2d(DualLinear): 
-    def __init__(self, layer, out_features): 
+    def __init__(self, layer, out_features, bias=None): 
         super(DualLinear, self).__init__()
-        if not isinstance(layer, nn.Conv2d):
-            raise ValueError("Expected nn.Conv2d input.")
-        self.layer = layer
-        if layer.bias is None: 
-            self.bias = None
-        else: 
-            self.bias = [full_bias(layer, out_features[1:]).contiguous()]
+        if bias is None:
+            if not isinstance(layer, nn.Conv2d):
+                raise ValueError("Expected nn.Conv2d input.")
+            self.layer = layer
+            self.out_features = out_features
+            if layer.bias is None: 
+                self.bias = None
+            else: 
+                self.bias = [full_bias(layer, out_features[1:]).contiguous()]
+        else:
+            self.bias = bias
+            self.layer = layer
+            self.out_features = out_features
 
     def forward(self, *xs): 
         x = xs[-1]
@@ -145,10 +158,14 @@ class DualConv2d(DualLinear):
         return out
 
 class DualReshape(DualLayer): 
-    def __init__(self, in_f, out_f): 
+    def __init__(self, in_f, out_f, copy=False): 
         super(DualReshape, self).__init__()
-        self.in_f = in_f[1:]
-        self.out_f = out_f[1:]
+        if copy is False:
+            self.in_f = in_f[1:]
+            self.out_f = out_f[1:]
+        else:
+            self.in_f = in_f
+            self.out_f = out_f
 
     def forward(self, *xs): 
         x = xs[-1]
@@ -174,33 +191,41 @@ class DualReshape(DualLayer):
         return 0
 
 class DualReLU(DualLayer): 
-    def __init__(self, zl, zu): 
+    def __init__(self, zl, zu, I=None, I_ind=None, I_empty=None, I_collapse=None, d=None, nus=None): 
         super(DualReLU, self).__init__()
+        if I is None:
+            d = (zl >= 0).detach().type_as(zl)
+            I = ((zu > 0).detach() * (zl < 0).detach())
+            if I.sum().item() > 0:
+                d[I] += zu[I]/(zu[I] - zl[I])
+
+            n = d[0].numel()
+            if I.sum().item() > 0: 
+                self.I_empty = False
+                self.I_ind = I.view(-1,n).nonzero()
 
 
-        d = (zl >= 0).detach().type_as(zl)
-        I = ((zu > 0).detach() * (zl < 0).detach())
-        if I.sum().item() > 0:
-            d[I] += zu[I]/(zu[I] - zl[I])
+                self.nus = [zl.new(I.sum().item(), n).zero_()]
+                self.nus[-1].scatter_(1, self.I_ind[:,1,None], d[I][:,None])
+                self.nus[-1] = self.nus[-1].view(-1, *(d.size()[1:]))
+                self.I_collapse = zl.new(self.I_ind.size(0),zl.size(0)).zero_()
+                self.I_collapse.scatter_(1, self.I_ind[:,0][:,None], 1)
+            else: 
+                self.I_empty = True
 
-        n = d[0].numel()
-        if I.sum().item() > 0: 
-            self.I_empty = False
-            self.I_ind = I.view(-1,n).nonzero()
-
-
-            self.nus = [zl.new(I.sum().item(), n).zero_()]
-            self.nus[-1].scatter_(1, self.I_ind[:,1,None], d[I][:,None])
-            self.nus[-1] = self.nus[-1].view(-1, *(d.size()[1:]))
-            self.I_collapse = zl.new(self.I_ind.size(0),zl.size(0)).zero_()
-            self.I_collapse.scatter_(1, self.I_ind[:,0][:,None], 1)
-        else: 
-            self.I_empty = True
-
-        self.d = d
-        self.I = I
-        self.zl = zl
-        self.zu = zu
+            self.d = d
+            self.I = I
+            self.zl = zl
+            self.zu = zu
+        else:
+            self.I = I
+            self.I_ind = I_ind
+            self.I_empty = I_empty
+            self.I_collapse = I_collapse
+            self.d = d
+            self.nus = nus
+            self.zl = zl
+            self.zu = zu
 
     def apply(self, dual_layer): 
         if self.I_empty: 
@@ -209,6 +234,7 @@ class DualReLU(DualLayer):
             self.nus.append(dual_layer(*self.nus, I_ind=self.I_ind))
         else: 
             self.nus.append(dual_layer(*self.nus))
+        #print("Dual_ReLU nus: ", len(self.nus))
 
     def bounds(self, network=None): 
         if self.I_empty: 

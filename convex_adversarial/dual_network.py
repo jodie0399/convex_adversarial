@@ -1,7 +1,9 @@
 import torch
 import torch.nn as nn
+from torch.nn import functional as F
 import torch.optim as optim
 from torch.autograd import Variable
+from convex_adversarial.dual_layers import DualLinear, DualReLU
 
 from .utils import Dense, DenseSequential
 from .dual_inputs import select_input
@@ -13,7 +15,7 @@ import warnings
 class DualNetwork(nn.Module):   
     def __init__(self, net, X, epsilon, 
                  proj=None, norm_type='l1', bounded_input=False, 
-                 data_parallel=True):
+                 data_parallel=True, mask=None, provided_zl = None, provided_zu = None):
         """  
         This class creates the dual network. 
 
@@ -43,13 +45,50 @@ class DualNetwork(nn.Module):
                     zs.append(l(zs[-1]))
                 nf.append(zs[-1].size())
 
+        #self.nf = nf 
 
         # Use the bounded boxes
         dual_net = [select_input(X, epsilon, proj, norm_type, bounded_input)]
+        
+        #change_bounds=False
+        #if mask is not None:
+        #    change_bounds = True
+        replace_bounds = False
+        if provided_zl is not None and provided_zu is not None:
+            replace_bounds= True
+            provided_layers_length = len(provided_zu)
 
+        #elif provided_zl is None and provided_zu is None:
+        #    pass
+        #else:
+        #    print('must provide both variables: zu, zl')
+
+        mask_idx = 0
         for i,(in_f,out_f,layer) in enumerate(zip(nf[:-1], nf[1:], net)): 
             dual_layer = select_layer(layer, dual_net, X, proj, norm_type,
                                       in_f, out_f, zs[i])
+            if isinstance(dual_layer, DualReLU) and replace_bounds:
+            #    if change_bounds:
+            #        temp = mask[mask_idx]
+            #        temp = temp.reshape(dual_layer.zu.size())
+            #        # change the ub that is positive  to 0 if the corresponding
+            #        # mask decision is 0
+            #        #import pdb; pdb.set_trace()
+            #        dual_layer.zu = -F.relu(-dual_layer.zu*(temp==0).float()) + F.relu(dual_layer.zu*(temp!=0).float())
+            #        # change the lb that is negative to 0 if the corresponding
+            #        # mask decision is 1
+            #        dual_layer.zl = F.relu(dual_layer.zl*(temp==1).float()) - F.relu(-dual_layer.zl*(temp!=1).float())
+            #    
+                zu_pre = dual_layer.zu
+                zl_pre = dual_layer.zl
+            #    if replace_bounds:
+            #        #import pdb; pdb.set_trace()
+                zu_pre = torch.min(zu_pre, provided_zu[mask_idx]) 
+                zl_pre = torch.max(zl_pre, provided_zl[mask_idx]) 
+                    
+                dual_layer = select_layer(layer, dual_net, X, proj, norm_type, in_f, out_f, zs[i], zl=zl_pre, zu=zu_pre)
+                mask_idx += 1
+
 
             # skip last layer
             if i < len(net)-1: 
@@ -71,6 +110,12 @@ class DualNetwork(nn.Module):
             nu.append(l.T(*nu))
         dual_net = self.dual_net + [self.last_layer]
         
+        #interm = [l.objective(*nu[:min(len(dual_net)-i+1, len(dual_net))]) for
+        #        i,l in enumerate(dual_net)]
+        #print(interm)
+        #import pdb
+        #pdb.set_trace()
+                
         return sum(l.objective(*nu[:min(len(dual_net)-i+1, len(dual_net))]) for
            i,l in enumerate(dual_net))
 
