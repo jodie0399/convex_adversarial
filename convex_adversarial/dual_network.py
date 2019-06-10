@@ -81,6 +81,7 @@ class DualNetwork(nn.Module):
             #    
                 zu_pre = dual_layer.zu
                 zl_pre = dual_layer.zl
+
             #    if replace_bounds:
             #        #import pdb; pdb.set_trace()
                 zu_pre = torch.min(zu_pre, provided_zu[mask_idx]) 

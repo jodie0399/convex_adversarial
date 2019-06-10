@@ -239,6 +239,51 @@ def cifar_model():
             m.bias.data.zero_()
     return model
 
+
+
+def cifar_model_m2():
+    model = nn.Sequential(
+        nn.Conv2d(3, 8, 4, stride=2, padding=1),
+        nn.ReLU(),
+        nn.Conv2d(8, 16, 4, stride=2, padding=1),
+        nn.ReLU(),
+        Flatten(),
+        nn.Linear(16*8*8,100),
+        nn.ReLU(),
+        nn.Linear(100, 10)
+    )
+    for m in model.modules():
+        if isinstance(m, nn.Conv2d):
+            n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
+            m.weight.data.normal_(0, math.sqrt(2. / n))
+            m.bias.data.zero_()
+    return model
+
+
+
+def cifar_model_m1(): 
+    model = nn.Sequential(
+        nn.Conv2d(3, 4, 4, stride=2, padding=1),
+        nn.ReLU(),
+        nn.Conv2d(4, 8, 4, stride=2, padding=1),
+        nn.ReLU(),
+        Flatten(),
+        nn.Linear(8*8*8, 100),
+        nn.ReLU(),
+        nn.Linear(100, 10)
+    )
+    for m in model.modules():
+        if isinstance(m, nn.Conv2d):
+            n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
+            m.weight.data.normal_(0, math.sqrt(2. / n))
+            m.bias.data.zero_()
+    return model
+
+
+
+
+
+
 def cifar_model_large(): 
     model = nn.Sequential(
         nn.Conv2d(3, 32, 3, stride=1, padding=1),

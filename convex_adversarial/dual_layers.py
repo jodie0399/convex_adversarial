@@ -55,6 +55,12 @@ class DualLinear(DualLayer):
             self.bias = bias
             self.out_features= out_features
 
+    def delmem(self):
+        del self.layer
+        del self.out_features
+        del self.bias[:]
+       
+
     def apply(self, dual_layer): 
         if self.bias is not None: 
             self.bias.append(dual_layer(*self.bias))
@@ -129,6 +135,11 @@ class DualConv2d(DualLinear):
             self.layer = layer
             self.out_features = out_features
 
+    def delmem(self):
+        del self.layer
+        del self.out_features
+        del self.bias[:]
+        
     def forward(self, *xs): 
         x = xs[-1]
         if x is None: 
@@ -166,6 +177,9 @@ class DualReshape(DualLayer):
         else:
             self.in_f = in_f
             self.out_f = out_f
+    
+    def delmem(self):
+        pass
 
     def forward(self, *xs): 
         x = xs[-1]
@@ -212,6 +226,7 @@ class DualReLU(DualLayer):
                 self.I_collapse.scatter_(1, self.I_ind[:,0][:,None], 1)
             else: 
                 self.I_empty = True
+                self.nus = []
 
             self.d = d
             self.I = I
@@ -226,6 +241,19 @@ class DualReLU(DualLayer):
             self.nus = nus
             self.zl = zl
             self.zu = zu
+
+    def delmem(self):
+        if self.I_empty:
+            del self.zl
+            del self.zu
+        else:
+            del self.d
+            del self.I
+            del self.nus[:]
+            del self.I_collapse
+            del self.I_ind
+            del self.zl
+            del self.zu
 
     def apply(self, dual_layer): 
         if self.I_empty: 

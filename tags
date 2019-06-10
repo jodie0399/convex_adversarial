@@ -1,0 +1,765 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ABCMeta	build/lib/convex_adversarial/dual.py	/^from abc import ABCMeta, abstractmethod$/;"	i
+ABCMeta	convex_adversarial/dual.py	/^from abc import ABCMeta, abstractmethod$/;"	i
+Affine	examples/primal.py	/^from convex_adversarial import DualNetBounds, Affine, full_bias$/;"	i
+AverageMeter	examples/trainer.py	/^class AverageMeter(object):$/;"	c
+C	examples/primal.py	/^        C = torch.eye(num_classes).type_as(X)[y].unsqueeze(1) - torch.eye(num_classes).type_as(X).unsqueeze(0)$/;"	v
+DEBUG	examples/trainer.py	/^DEBUG = False$/;"	v
+Dense	build/lib/convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+Dense	build/lib/convex_adversarial/dual_layers.py	/^from .utils import full_bias, Dense$/;"	i
+Dense	build/lib/convex_adversarial/dual_network.py	/^from .utils import Dense, DenseSequential$/;"	i
+Dense	build/lib/convex_adversarial/utils.py	/^class Dense(nn.Module): $/;"	c
+Dense	convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+Dense	convex_adversarial/dual_layers.py	/^from .utils import full_bias, Dense$/;"	i
+Dense	convex_adversarial/dual_network.py	/^from .utils import Dense, DenseSequential$/;"	i
+Dense	convex_adversarial/utils.py	/^class Dense(nn.Module): $/;"	c
+Dense	examples/problems.py	/^from convex_adversarial import Dense, DenseSequential$/;"	i
+DenseSequential	build/lib/convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+DenseSequential	build/lib/convex_adversarial/dual_network.py	/^from .utils import Dense, DenseSequential$/;"	i
+DenseSequential	build/lib/convex_adversarial/utils.py	/^class DenseSequential(nn.Sequential): $/;"	c
+DenseSequential	convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+DenseSequential	convex_adversarial/dual_network.py	/^from .utils import Dense, DenseSequential$/;"	i
+DenseSequential	convex_adversarial/utils.py	/^class DenseSequential(nn.Sequential): $/;"	c
+DenseSequential	examples/problems.py	/^from convex_adversarial import Dense, DenseSequential$/;"	i
+DualBatchNorm2d	build/lib/convex_adversarial/dual_layers.py	/^class DualBatchNorm2d(DualLayer): $/;"	c
+DualBatchNorm2d	convex_adversarial/dual_layers.py	/^class DualBatchNorm2d(DualLayer): $/;"	c
+DualConv2d	build/lib/convex_adversarial/dual_layers.py	/^class DualConv2d(DualLinear): $/;"	c
+DualConv2d	convex_adversarial/dual_layers.py	/^class DualConv2d(DualLinear): $/;"	c
+DualDense	build/lib/convex_adversarial/dual_layers.py	/^class DualDense(DualLayer): $/;"	c
+DualDense	convex_adversarial/dual_layers.py	/^class DualDense(DualLayer): $/;"	c
+DualLayer	build/lib/convex_adversarial/dual.py	/^class DualLayer(DualObject): $/;"	c
+DualLayer	build/lib/convex_adversarial/dual_layers.py	/^from .dual import DualLayer$/;"	i
+DualLayer	convex_adversarial/dual.py	/^class DualLayer(DualObject): $/;"	c
+DualLayer	convex_adversarial/dual_layers.py	/^from .dual import DualLayer$/;"	i
+DualLinear	build/lib/convex_adversarial/dual_layers.py	/^class DualLinear(DualLayer): $/;"	c
+DualLinear	convex_adversarial/dual_layers.py	/^class DualLinear(DualLayer): $/;"	c
+DualLinear	convex_adversarial/dual_network.py	/^from convex_adversarial.dual_layers import DualLinear, DualReLU$/;"	i
+DualNetBounds	build/lib/convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+DualNetBounds	build/lib/convex_adversarial/dual_network.py	/^class DualNetBounds(DualNetwork): $/;"	c
+DualNetBounds	convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+DualNetBounds	convex_adversarial/dual_network.py	/^class DualNetBounds(DualNetwork): $/;"	c
+DualNetBounds	examples/mnist_epsilon.py	/^from convex_adversarial import DualNetBounds$/;"	i
+DualNetBounds	examples/primal.py	/^from convex_adversarial import DualNetBounds, Affine, full_bias$/;"	i
+DualNetBounds	examples/problems.py	/^from convex_adversarial import epsilon_from_model, DualNetBounds$/;"	i
+DualNetwork	build/lib/convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+DualNetwork	build/lib/convex_adversarial/dual_network.py	/^class DualNetwork(nn.Module):   $/;"	c
+DualNetwork	convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+DualNetwork	convex_adversarial/dual_network.py	/^class DualNetwork(nn.Module):   $/;"	c
+DualObject	build/lib/convex_adversarial/dual.py	/^class DualObject(nn.Module, metaclass=ABCMeta): $/;"	c
+DualObject	build/lib/convex_adversarial/dual_inputs.py	/^from .dual import DualObject$/;"	i
+DualObject	convex_adversarial/dual.py	/^class DualObject(nn.Module, metaclass=ABCMeta): $/;"	c
+DualObject	convex_adversarial/dual_inputs.py	/^from .dual import DualObject$/;"	i
+DualReLU	build/lib/convex_adversarial/dual_layers.py	/^class DualReLU(DualLayer): $/;"	c
+DualReLU	convex_adversarial/dual_layers.py	/^class DualReLU(DualLayer): $/;"	c
+DualReLU	convex_adversarial/dual_network.py	/^from convex_adversarial.dual_layers import DualLinear, DualReLU$/;"	i
+DualReLUProj	build/lib/convex_adversarial/dual_layers.py	/^class DualReLUProj(DualReLU): $/;"	c
+DualReLUProj	convex_adversarial/dual_layers.py	/^class DualReLUProj(DualReLU): $/;"	c
+DualReshape	build/lib/convex_adversarial/dual_layers.py	/^class DualReshape(DualLayer): $/;"	c
+DualReshape	convex_adversarial/dual_layers.py	/^class DualReshape(DualLayer): $/;"	c
+F	build/lib/convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+F	convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+F	convex_adversarial/dual_network.py	/^from torch.nn import functional as F$/;"	i
+F	examples/cifar.py	/^import torch.nn.functional as F$/;"	i
+F	examples/cifar_evaluate.py	/^import torch.nn.functional as F$/;"	i
+F	examples/fashion_mnist.py	/^import torch.nn.functional as F$/;"	i
+F	examples/har.py	/^import torch.nn.functional as F$/;"	i
+F	examples/mnist.py	/^import torch.nn.functional as F$/;"	i
+F	examples/mnist_epsilon.py	/^import torch.nn.functional as F$/;"	i
+F	examples/primal.py	/^import torch.nn.functional as F$/;"	i
+F	examples/problems.py	/^import torch.nn.functional as F$/;"	i
+F	examples/svhn.py	/^import torch.nn.functional as F$/;"	i
+Flatten	examples/attacks.py	/^class Flatten(nn.Module):$/;"	c
+Flatten	examples/problems.py	/^class Flatten(nn.Module):$/;"	c
+Flatten	examples/runtime.py	/^from problems import Flatten$/;"	i
+GL	build/lib/convex_adversarial/utils.py	/^def GL(epsilon): $/;"	f
+GL	convex_adversarial/utils.py	/^def GL(epsilon): $/;"	f
+GR	build/lib/convex_adversarial/utils.py	/^def GR(epsilon): $/;"	f
+GR	convex_adversarial/utils.py	/^def GR(epsilon): $/;"	f
+I	examples/mnist_epsilon.py	/^        I = (~(out.data.unsqueeze(1) == torch.arange(num_classes).type_as(out.data).unsqueeze(0)).unsqueeze(2))$/;"	v
+I	examples/primal.py	/^            I = [(u >= 0) * (l <= 0) for u,l in zip(zu,zl)]$/;"	v
+I_minus	examples/primal.py	/^            I_minus = [u < 0 for u in zu]$/;"	v
+I_plus	examples/primal.py	/^            I_plus = [l > 0 for l in zl]$/;"	v
+Identity	build/lib/convex_adversarial/dual_layers.py	/^class Identity(DualLayer): $/;"	c
+Identity	convex_adversarial/dual_layers.py	/^class Identity(DualLayer): $/;"	c
+InfBall	build/lib/convex_adversarial/dual_inputs.py	/^class InfBall(DualObject):$/;"	c
+InfBall	convex_adversarial/dual_inputs.py	/^class InfBall(DualObject):$/;"	c
+InfBallBounded	build/lib/convex_adversarial/dual_inputs.py	/^class InfBallBounded(DualObject):$/;"	c
+InfBallBounded	convex_adversarial/dual_inputs.py	/^class InfBallBounded(DualObject):$/;"	c
+InfBallProj	build/lib/convex_adversarial/dual_inputs.py	/^class InfBallProj(InfBall):$/;"	c
+InfBallProj	convex_adversarial/dual_inputs.py	/^class InfBallProj(InfBall):$/;"	c
+InfBallProjBounded	build/lib/convex_adversarial/dual_inputs.py	/^class InfBallProjBounded(InfBallProj):$/;"	c
+InfBallProjBounded	convex_adversarial/dual_inputs.py	/^class InfBallProjBounded(InfBallProj):$/;"	c
+InputSequential	build/lib/convex_adversarial/dual_network.py	/^class InputSequential(nn.Sequential): $/;"	c
+InputSequential	convex_adversarial/dual_network.py	/^class InputSequential(nn.Sequential): $/;"	c
+L2Ball	build/lib/convex_adversarial/dual_inputs.py	/^class L2Ball(DualObject):$/;"	c
+L2Ball	convex_adversarial/dual_inputs.py	/^class L2Ball(DualObject):$/;"	c
+L2BallProj	build/lib/convex_adversarial/dual_inputs.py	/^class L2BallProj(L2Ball):$/;"	c
+L2BallProj	convex_adversarial/dual_inputs.py	/^class L2BallProj(L2Ball):$/;"	c
+Meter	examples/runtime.py	/^class Meter: $/;"	c
+PROJ	examples/runtime.py	/^PROJ = True$/;"	v
+RobustBounds	build/lib/convex_adversarial/dual_network.py	/^class RobustBounds(nn.Module): $/;"	c
+RobustBounds	convex_adversarial/dual_network.py	/^class RobustBounds(nn.Module): $/;"	c
+T	build/lib/convex_adversarial/dual.py	/^    def T(self, *xs): $/;"	m	class:DualLayer
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualBatchNorm2d
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualConv2d
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualDense
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualLinear
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualReLU
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualReshape
+T	build/lib/convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:Identity
+T	convex_adversarial/dual.py	/^    def T(self, *xs): $/;"	m	class:DualLayer
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualBatchNorm2d
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualConv2d
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualDense
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualLinear
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualReLU
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:DualReshape
+T	convex_adversarial/dual_layers.py	/^    def T(self, *xs): $/;"	m	class:Identity
+Variable	build/lib/convex_adversarial/dual_network.py	/^from torch.autograd import Variable$/;"	i
+Variable	convex_adversarial/dual_network.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/attacks.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/cifar.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/cifar_evaluate.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/fashion_mnist.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/har.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/mnist.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/mnist_epsilon.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/primal.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/problems.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/runtime.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/svhn.py	/^from torch.autograd import Variable$/;"	i
+Variable	examples/trainer.py	/^from torch.autograd import Variable$/;"	i
+W	examples/primal.py	/^        W = [l(Variable(torch.eye(l.in_features).cuda())).t().cpu().data.numpy() for l in affine]$/;"	v
+X	examples/runtime.py	/^X = torch.Tensor(np.array(x)).cuda()$/;"	v
+__init__	build/lib/convex_adversarial/dual.py	/^    def __init__(self): $/;"	m	class:DualObject
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon): $/;"	m	class:InfBall
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon): $/;"	m	class:L2Ball
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k): $/;"	m	class:InfBallProj
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k): $/;"	m	class:L2BallProj
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k, l=0, u=1): $/;"	m	class:InfBallProjBounded
+__init__	build/lib/convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, l=0, u=1): $/;"	m	class:InfBallBounded
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, dense, net, out_features): $/;"	m	class:DualDense
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, in_f, out_f): $/;"	m	class:DualReshape
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, layer, minibatch, out_features): $/;"	m	class:DualBatchNorm2d
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, layer, out_features): $/;"	m	class:DualConv2d
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, layer, out_features): $/;"	m	class:DualLinear
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, zl, zu): $/;"	m	class:DualReLU
+__init__	build/lib/convex_adversarial/dual_layers.py	/^    def __init__(self, zl, zu, k): $/;"	m	class:DualReLUProj
+__init__	build/lib/convex_adversarial/dual_network.py	/^    def __init__(self, *args, **kwargs): $/;"	m	class:InputSequential
+__init__	build/lib/convex_adversarial/dual_network.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:DualNetBounds
+__init__	build/lib/convex_adversarial/dual_network.py	/^    def __init__(self, net, X, epsilon, $/;"	m	class:DualNetwork
+__init__	build/lib/convex_adversarial/dual_network.py	/^    def __init__(self, net, epsilon, **kwargs): $/;"	m	class:RobustBounds
+__init__	build/lib/convex_adversarial/utils.py	/^    def __init__(self, *Ws): $/;"	m	class:Dense
+__init__	convex_adversarial/dual.py	/^    def __init__(self): $/;"	m	class:DualObject
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon): $/;"	m	class:L2Ball
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k): $/;"	m	class:InfBallProj
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k): $/;"	m	class:L2BallProj
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, k, l=0, u=1): $/;"	m	class:InfBallProjBounded
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, l=0, u=1, nu_1=None, nu_x=None): $/;"	m	class:InfBallBounded
+__init__	convex_adversarial/dual_inputs.py	/^    def __init__(self, X, epsilon, nu_1=None, nu_x = None): $/;"	m	class:InfBall
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, dense, net, out_features): $/;"	m	class:DualDense
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, in_f, out_f, copy=False): $/;"	m	class:DualReshape
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, layer, minibatch, out_features): $/;"	m	class:DualBatchNorm2d
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, layer, out_features, bias=None): $/;"	m	class:DualConv2d
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, layer, out_features, bias=None): $/;"	m	class:DualLinear
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, zl, zu, I=None, I_ind=None, I_empty=None, I_collapse=None, d=None, nus=None): $/;"	m	class:DualReLU
+__init__	convex_adversarial/dual_layers.py	/^    def __init__(self, zl, zu, k): $/;"	m	class:DualReLUProj
+__init__	convex_adversarial/dual_network.py	/^    def __init__(self, *args, **kwargs): $/;"	m	class:InputSequential
+__init__	convex_adversarial/dual_network.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:DualNetBounds
+__init__	convex_adversarial/dual_network.py	/^    def __init__(self, net, X, epsilon, $/;"	m	class:DualNetwork
+__init__	convex_adversarial/dual_network.py	/^    def __init__(self, net, epsilon, **kwargs): $/;"	m	class:RobustBounds
+__init__	convex_adversarial/utils.py	/^    def __init__(self, *Ws): $/;"	m	class:Dense
+__init__	examples/runtime.py	/^    def __init__(self): $/;"	m	class:Meter
+__init__	examples/trainer.py	/^    def __init__(self):$/;"	m	class:AverageMeter
+_fgs	examples/attacks.py	/^def _fgs(model, X, y, epsilon): $/;"	f
+_pgd	examples/attacks.py	/^def _pgd(model, X, y, epsilon, niters=100, alpha=0.01): $/;"	f
+_pgd	examples/trainer.py	/^from attacks import _pgd$/;"	i
+abstractmethod	build/lib/convex_adversarial/dual.py	/^from abc import ABCMeta, abstractmethod$/;"	i
+abstractmethod	convex_adversarial/dual.py	/^from abc import ABCMeta, abstractmethod$/;"	i
+add	examples/runtime.py	/^    def add(self, x): $/;"	m	class:Meter
+affine	examples/primal.py	/^        affine = dual.affine$/;"	v
+alpha	examples/mnist_epsilon.py	/^            alpha = args.alpha$/;"	v
+alpha	examples/mnist_epsilon.py	/^        alpha = args.alpha$/;"	v
+apply	build/lib/convex_adversarial/dual.py	/^    def apply(self, dual_layer):$/;"	m	class:DualObject
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBall
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallBounded
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallProj
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallProjBounded
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:L2Ball
+apply	build/lib/convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:L2BallProj
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualBatchNorm2d
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualDense
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualLinear
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReLU
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReLUProj
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReshape
+apply	build/lib/convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:Identity
+apply	convex_adversarial/dual.py	/^    def apply(self, dual_layer):$/;"	m	class:DualObject
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBall
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallBounded
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallProj
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:InfBallProjBounded
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:L2Ball
+apply	convex_adversarial/dual_inputs.py	/^    def apply(self, dual_layer): $/;"	m	class:L2BallProj
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualBatchNorm2d
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualDense
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualLinear
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReLU
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReLUProj
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:DualReshape
+apply	convex_adversarial/dual_layers.py	/^    def apply(self, dual_layer): $/;"	m	class:Identity
+argparse	examples/fashion_mnist.py	/^import argparse$/;"	i
+argparse	examples/har.py	/^import argparse$/;"	i
+argparse	examples/mnist_epsilon.py	/^import argparse$/;"	i
+argparse	examples/primal.py	/^import argparse$/;"	i
+argparse	examples/problems.py	/^import argparse$/;"	i
+argparse	examples/svhn.py	/^import argparse$/;"	i
+argparse	run.py	/^import argparse$/;"	i
+argparser	examples/problems.py	/^def argparser(batch_size=50, epochs=20, seed=0, verbose=1, lr=1e-3, $/;"	f
+argparser_evaluate	examples/problems.py	/^def argparser_evaluate(epsilon=0.1, norm='l1'): $/;"	f
+args	examples/cifar.py	/^    args = pblm.argparser(epsilon = 0.0347, starting_epsilon=0.001, batch_size = 30, $/;"	v
+args	examples/cifar_evaluate.py	/^    args = pblm.argparser_evaluate(epsilon = 0.0347, norm='l1')$/;"	v
+args	examples/fashion_mnist.py	/^    args = parser.parse_args()$/;"	v
+args	examples/har.py	/^    args = parser.parse_args()$/;"	v
+args	examples/mnist.py	/^    args = pblm.argparser(opt='adam', verbose=200, starting_epsilon=0.01)$/;"	v
+args	examples/mnist_epsilon.py	/^    args = parser.parse_args()$/;"	v
+args	examples/primal.py	/^    args = parser.parse_args()$/;"	v
+args	examples/svhn.py	/^    args = parser.parse_args()$/;"	v
+args	run.py	/^    args = parser.parse_args()$/;"	v
+args2kwargs	examples/problems.py	/^def args2kwargs(args, X=None): $/;"	f
+attack	examples/attacks.py	/^def attack(loader, model, epsilon, verbose=False, atk=None,$/;"	f
+author	setup.py	/^    author='Eric Wong',$/;"	v
+author_email	setup.py	/^    author_email='ericwong@cs.cmu.edu',$/;"	v
+b	examples/primal.py	/^        b = [bias.view(-1).cpu().data.numpy() for bias in dual.biases]$/;"	v
+backends	examples/cifar.py	/^import torch.backends.cudnn as cudnn$/;"	i
+backends	examples/cifar_evaluate.py	/^import torch.backends.cudnn as cudnn$/;"	i
+backends	examples/mnist.py	/^import torch.backends.cudnn as cudnn$/;"	i
+batch	build/lib/convex_adversarial/dual_layers.py	/^def batch(A, n): $/;"	f
+batch	convex_adversarial/dual_layers.py	/^def batch(A, n): $/;"	f
+best_err	examples/cifar.py	/^                best_err = err$/;"	v
+best_err	examples/cifar.py	/^    best_err = 1$/;"	v
+best_err	examples/cifar_evaluate.py	/^    best_err = 1$/;"	v
+best_err	examples/mnist.py	/^                best_err = err$/;"	v
+best_err	examples/mnist.py	/^    best_err = 1$/;"	v
+block	examples/problems.py	/^    def  block(in_filters, out_filters, k, downsample): $/;"	f	function:cifar_model_resnet
+bounds	build/lib/convex_adversarial/dual.py	/^    def bounds(self): $/;"	m	class:DualObject
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBall
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBallBounded
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBallProjBounded
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:L2Ball
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None):$/;"	m	class:InfBallProj
+bounds	build/lib/convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None):$/;"	m	class:L2BallProj
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualDense
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReLU
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReLUProj
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReshape
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:Identity
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None):$/;"	m	class:DualBatchNorm2d
+bounds	build/lib/convex_adversarial/dual_layers.py	/^    def bounds(self, network=None):$/;"	m	class:DualLinear
+bounds	convex_adversarial/dual.py	/^    def bounds(self): $/;"	m	class:DualObject
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBall
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBallBounded
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:InfBallProjBounded
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None): $/;"	m	class:L2Ball
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None):$/;"	m	class:InfBallProj
+bounds	convex_adversarial/dual_inputs.py	/^    def bounds(self, network=None):$/;"	m	class:L2BallProj
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualDense
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReLU
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReLUProj
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:DualReshape
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None): $/;"	m	class:Identity
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None):$/;"	m	class:DualBatchNorm2d
+bounds	convex_adversarial/dual_layers.py	/^    def bounds(self, network=None):$/;"	m	class:DualLinear
+c	examples/mnist_epsilon.py	/^            c = c.cuda()$/;"	v
+c	examples/mnist_epsilon.py	/^        c = (c[I].view(X.size(0),num_classes-1,num_classes))$/;"	v
+c	examples/mnist_epsilon.py	/^        c = Variable(torch.eye(num_classes).type_as(X.data)[out.data].unsqueeze(1) - torch.eye(num_classes).type_as(X.data).unsqueeze(0))$/;"	v
+cifar_loaders	examples/problems.py	/^def cifar_loaders(batch_size, shuffle_test=False): $/;"	f
+cifar_model	examples/problems.py	/^def cifar_model(): $/;"	f
+cifar_model_large	examples/problems.py	/^def cifar_model_large(): $/;"	f
+cifar_model_m1	examples/problems.py	/^def cifar_model_m1(): $/;"	f
+cifar_model_m2	examples/problems.py	/^def cifar_model_m2():$/;"	f
+cifar_model_resnet	examples/problems.py	/^def cifar_model_resnet(N = 5, factor=10): $/;"	f
+clip_grad	examples/cifar.py	/^                                clip_grad=1, **kwargs)$/;"	v
+cons	examples/primal.py	/^                cons = cons_eq + cons_ball + cons_zero + cons_linear + cons_upper$/;"	v
+cons_upper	examples/primal.py	/^                cons_upper = [(cp.mul_elemwise(-(np.maximum(zu[i],0) - np.maximum(zl[i], 0)), zhat[i]) +$/;"	v
+conv2d	build/lib/convex_adversarial/dual_layers.py	/^def conv2d(x, *args, **kwargs): $/;"	f
+conv2d	convex_adversarial/dual_layers.py	/^def conv2d(x, *args, **kwargs): $/;"	f
+conv_transpose2d	build/lib/convex_adversarial/dual_layers.py	/^def conv_transpose2d(x, *args, **kwargs):$/;"	f
+conv_transpose2d	convex_adversarial/dual_layers.py	/^def conv_transpose2d(x, *args, **kwargs):$/;"	f
+correct	examples/mnist_epsilon.py	/^    correct = []$/;"	v
+cp	examples/fashion_mnist.py	/^import cvxpy as cp$/;"	i
+cp	examples/primal.py	/^import cvxpy as cp$/;"	i
+cp2np	examples/primal.py	/^cp2np = lambda x : np.asarray(x.value).T$/;"	v
+cudnn	examples/cifar.py	/^import torch.backends.cudnn as cudnn$/;"	i
+cudnn	examples/cifar_evaluate.py	/^import torch.backends.cudnn as cudnn$/;"	i
+cudnn	examples/mnist.py	/^import torch.backends.cudnn as cudnn$/;"	i
+d	examples/cifar_evaluate.py	/^    d = torch.load(args.load)$/;"	v
+datasets	examples/attacks.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/cifar.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/cifar_evaluate.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/fashion_mnist.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/har.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/mnist.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/mnist_epsilon.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/primal.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/problems.py	/^import torchvision.datasets as datasets$/;"	i
+datasets	examples/svhn.py	/^import torchvision.datasets as datasets$/;"	i
+delmem	convex_adversarial/dual_inputs.py	/^    def delmem(self):$/;"	m	class:InfBall
+delmem	convex_adversarial/dual_inputs.py	/^    def delmem(self):$/;"	m	class:InfBallBounded
+delmem	convex_adversarial/dual_layers.py	/^    def delmem(self):$/;"	m	class:DualConv2d
+delmem	convex_adversarial/dual_layers.py	/^    def delmem(self):$/;"	m	class:DualLinear
+delmem	convex_adversarial/dual_layers.py	/^    def delmem(self):$/;"	m	class:DualReLU
+delmem	convex_adversarial/dual_layers.py	/^    def delmem(self):$/;"	m	class:DualReshape
+description	setup.py	/^    description="A library implementing robust loss functions for neural networks. ",$/;"	v
+docker_run	run.py	/^def docker_run(cmd): $/;"	f
+dual	examples/primal.py	/^        dual = DualNetBounds(model, Variable(X.cuda()), epsilon, True, True)$/;"	v
+eps_schedule	examples/cifar.py	/^        eps_schedule = np.linspace(args.starting_epsilon, $/;"	v
+eps_schedule	examples/mnist.py	/^        eps_schedule = np.linspace(args.starting_epsilon, $/;"	v
+epsilon	examples/cifar.py	/^                epsilon = args.epsilon$/;"	v
+epsilon	examples/cifar.py	/^                epsilon = float(eps_schedule[t])$/;"	v
+epsilon	examples/cifar_evaluate.py	/^    epsilon = args.epsilon$/;"	v
+epsilon	examples/fashion_mnist.py	/^            epsilon = args.epsilon$/;"	v
+epsilon	examples/fashion_mnist.py	/^            epsilon = args.starting_epsilon + (t\/(args.epochs\/\/2))*(args.epsilon - args.starting_epsilon)$/;"	v
+epsilon	examples/har.py	/^                epsilon = args.epsilon$/;"	v
+epsilon	examples/har.py	/^                epsilon = args.starting_epsilon + (t\/(args.epochs\/\/2))*(args.epsilon - args.starting_epsilon)$/;"	v
+epsilon	examples/mnist.py	/^                epsilon = args.epsilon$/;"	v
+epsilon	examples/mnist.py	/^                epsilon = float(eps_schedule[t])$/;"	v
+epsilon	examples/mnist_epsilon.py	/^            epsilon = epsilon0$/;"	v
+epsilon	examples/mnist_epsilon.py	/^        epsilon = Variable(args.epsilon*torch.ones(X.size(0)).cuda(), requires_grad=True)$/;"	v
+epsilon	examples/primal.py	/^    epsilon = 0.1$/;"	v
+epsilon	examples/runtime.py	/^epsilon = r\/2$/;"	v
+epsilon	examples/svhn.py	/^                epsilon = args.epsilon$/;"	v
+epsilon	examples/svhn.py	/^                epsilon = args.starting_epsilon + (t\/(args.epochs\/\/2))*(args.epsilon - args.starting_epsilon)$/;"	v
+epsilon0	examples/mnist_epsilon.py	/^                epsilon0 = Variable((epsilon - alpha*(f_max\/(epsilon.grad))).data,$/;"	v
+epsilon0	examples/mnist_epsilon.py	/^            epsilon0 = Variable((epsilon - alpha*(f_max\/(epsilon.grad))).data,$/;"	v
+epsilon_from_model	build/lib/convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+epsilon_from_model	build/lib/convex_adversarial/utils.py	/^def epsilon_from_model(model, X, k, delta, m): $/;"	f
+epsilon_from_model	convex_adversarial/__init__.py	/^from .utils import DenseSequential, Dense, epsilon_from_model/;"	i
+epsilon_from_model	convex_adversarial/utils.py	/^def epsilon_from_model(model, X, k, delta, m): $/;"	f
+epsilon_from_model	examples/problems.py	/^from convex_adversarial import epsilon_from_model, DualNetBounds$/;"	i
+err	examples/cifar.py	/^                err = evaluate_baseline(test_loader, model[0], t, test_log,$/;"	v
+err	examples/cifar.py	/^                err = evaluate_madry(test_loader, model[0], args.epsilon, $/;"	v
+err	examples/cifar.py	/^                err = evaluate_robust(test_loader, model[0], args.epsilon, t,$/;"	v
+err	examples/cifar.py	/^                err = evaluate_robust_cascade(test_loader, model,$/;"	v
+err	examples/cifar_evaluate.py	/^    err = evaluate_robust_cascade(test_loader, model,$/;"	v
+err	examples/mnist.py	/^                err = evaluate_baseline(test_loader, model[0], t, test_log,$/;"	v
+err	examples/mnist.py	/^                err = evaluate_madry(test_loader, model[0], args.epsilon, $/;"	v
+err	examples/mnist.py	/^                err = evaluate_robust(test_loader, model[0], args.epsilon,$/;"	v
+err	examples/mnist.py	/^                err = evaluate_robust_cascade(test_loader, model,$/;"	v
+evaluate_baseline	examples/trainer.py	/^def evaluate_baseline(loader, model, epoch, log, verbose):$/;"	f
+evaluate_madry	examples/trainer.py	/^def evaluate_madry(loader, model, epsilon, epoch, log, verbose):$/;"	f
+evaluate_robust	examples/trainer.py	/^def evaluate_robust(loader, model, epsilon, epoch, log, verbose, $/;"	f
+evaluate_robust_cascade	examples/trainer.py	/^def evaluate_robust_cascade(loader, models, epsilon, epoch, log, verbose, **kwargs):$/;"	f
+f	examples/mnist_epsilon.py	/^        def f(eps): $/;"	f
+f_max	examples/mnist_epsilon.py	/^            f_max = f(epsilon)$/;"	v
+fashion_mnist_loaders	examples/problems.py	/^def fashion_mnist_loaders(batch_size): $/;"	f
+fgs	examples/attacks.py	/^def fgs(loader, model, epsilon, verbose=False, robust=False): $/;"	f
+find_packages	setup.py	/^from setuptools import find_packages, setup$/;"	i
+fobj	examples/primal.py	/^                fobj = cp.Problem(cp.Minimize(c*zhat[-1]), cons).solve(verbose=False)$/;"	v
+forward	build/lib/convex_adversarial/dual.py	/^    def forward(self, *xs): $/;"	m	class:DualLayer
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualBatchNorm2d
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualConv2d
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualDense
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualLinear
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualReshape
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:Identity
+forward	build/lib/convex_adversarial/dual_layers.py	/^    def forward(self, *xs, I_ind=None): $/;"	m	class:DualReLU
+forward	build/lib/convex_adversarial/dual_network.py	/^    def forward(self, X,y): $/;"	m	class:RobustBounds
+forward	build/lib/convex_adversarial/dual_network.py	/^    def forward(self, c):$/;"	m	class:DualNetwork
+forward	build/lib/convex_adversarial/dual_network.py	/^    def forward(self, input): $/;"	m	class:InputSequential
+forward	build/lib/convex_adversarial/utils.py	/^    def forward(self, *xs): $/;"	m	class:Dense
+forward	build/lib/convex_adversarial/utils.py	/^    def forward(self, x):$/;"	m	class:DenseSequential
+forward	convex_adversarial/dual.py	/^    def forward(self, *xs): $/;"	m	class:DualLayer
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualBatchNorm2d
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualConv2d
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualDense
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualLinear
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:DualReshape
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs): $/;"	m	class:Identity
+forward	convex_adversarial/dual_layers.py	/^    def forward(self, *xs, I_ind=None): $/;"	m	class:DualReLU
+forward	convex_adversarial/dual_network.py	/^    def forward(self, X,y): $/;"	m	class:RobustBounds
+forward	convex_adversarial/dual_network.py	/^    def forward(self, c):$/;"	m	class:DualNetwork
+forward	convex_adversarial/dual_network.py	/^    def forward(self, input): $/;"	m	class:InputSequential
+forward	convex_adversarial/utils.py	/^    def forward(self, *xs): $/;"	m	class:Dense
+forward	convex_adversarial/utils.py	/^    def forward(self, x):$/;"	m	class:DenseSequential
+forward	examples/attacks.py	/^    def forward(self, x):$/;"	m	class:Flatten
+forward	examples/problems.py	/^    def forward(self, x):$/;"	m	class:Flatten
+full_bias	build/lib/convex_adversarial/dual_layers.py	/^from .utils import full_bias, Dense$/;"	i
+full_bias	build/lib/convex_adversarial/utils.py	/^def full_bias(l, n=None): $/;"	f
+full_bias	convex_adversarial/dual_layers.py	/^from .utils import full_bias, Dense$/;"	i
+full_bias	convex_adversarial/utils.py	/^def full_bias(l, n=None): $/;"	f
+full_bias	examples/primal.py	/^from convex_adversarial import DualNetBounds, Affine, full_bias$/;"	i
+g	build/lib/convex_adversarial/dual_network.py	/^    def g(self, c):$/;"	m	class:DualNetBounds
+g	convex_adversarial/dual_network.py	/^    def g(self, c):$/;"	m	class:DualNetBounds
+gc	examples/trainer.py	/^import gc$/;"	i
+get_epsilon	build/lib/convex_adversarial/utils.py	/^def get_epsilon(delta, k, alpha=1e-2): $/;"	f
+get_epsilon	convex_adversarial/utils.py	/^def get_epsilon(delta, k, alpha=1e-2): $/;"	f
+gid	run.py	/^    gid = int(subprocess.run(['id', '-g'], stdout=subprocess.PIPE).stdout)$/;"	v
+gpu_mem	examples/runtime.py	/^def gpu_mem(): $/;"	f
+gpustat	examples/runtime.py	/^import gpustat$/;"	i
+group	examples/problems.py	/^    def group(inf, outf, N): $/;"	f	function:model_deep
+har_500_250_100_model	examples/problems.py	/^def har_500_250_100_model(): $/;"	f
+har_500_250_model	examples/problems.py	/^def har_500_250_model(): $/;"	f
+har_500_model	examples/problems.py	/^def har_500_model(): $/;"	f
+har_loaders	examples/problems.py	/^def har_loaders(batch_size):     $/;"	f
+har_resnet_model	examples/problems.py	/^def har_resnet_model(): $/;"	f
+incorrect	examples/mnist_epsilon.py	/^    incorrect = []$/;"	v
+install_requires	setup.py	/^    install_requires=[$/;"	v
+k	examples/primal.py	/^        k = len(layers)$/;"	v
+kwargs	examples/cifar.py	/^    kwargs = pblm.args2kwargs(args)$/;"	v
+kwargs	examples/mnist.py	/^    kwargs = pblm.args2kwargs(args, X=Variable(X.cuda()))$/;"	v
+l	examples/mnist_epsilon.py	/^    l = []$/;"	v
+layers	examples/primal.py	/^        layers = dual.layers$/;"	v
+license	setup.py	/^    license="MIT",$/;"	v
+loader	examples/mnist_epsilon.py	/^    loader = train_loader if args.train else test_loader$/;"	v
+loader	examples/primal.py	/^    loader = train_loader if args.train else test_loader$/;"	v
+log	examples/primal.py	/^    log = open(args.prefix + "_primal.log", "w")$/;"	v
+lr_scheduler	examples/cifar.py	/^        lr_scheduler = optim.lr_scheduler.StepLR(opt, step_size=10, gamma=0.5)$/;"	v
+lr_scheduler	examples/mnist.py	/^        lr_scheduler = optim.lr_scheduler.StepLR(opt, step_size=10, gamma=0.5)$/;"	v
+m	examples/cifar_evaluate.py	/^        m = select_model(args.model)$/;"	v
+m	examples/runtime.py	/^m = 10$/;"	v
+math	examples/cifar.py	/^import math$/;"	i
+math	examples/cifar_evaluate.py	/^import math$/;"	i
+math	examples/mnist.py	/^import math$/;"	i
+math	examples/problems.py	/^import math$/;"	i
+mean	examples/attacks.py	/^def mean(l): $/;"	f
+mems	examples/runtime.py	/^mems = Meter()$/;"	v
+mnist_500	examples/problems.py	/^def mnist_500(): $/;"	f
+mnist_loaders	examples/problems.py	/^def mnist_loaders(batch_size, shuffle_test=False): $/;"	f
+mnist_model	examples/problems.py	/^def mnist_model(): $/;"	f
+mnist_model_deep	examples/problems.py	/^def mnist_model_deep(k): $/;"	f
+mnist_model_large	examples/problems.py	/^def mnist_model_large(): $/;"	f
+mnist_model_wide	examples/problems.py	/^def mnist_model_wide(k): $/;"	f
+model	examples/cifar.py	/^    model = [select_model(args.model)]$/;"	v
+model	examples/cifar_evaluate.py	/^    model = []$/;"	v
+model	examples/fashion_mnist.py	/^        model = pblm.mnist_model().cuda()$/;"	v
+model	examples/fashion_mnist.py	/^        model = pblm.mnist_model_large().cuda()$/;"	v
+model	examples/fashion_mnist.py	/^        model = pblm.mnist_model_vgg().cuda()$/;"	v
+model	examples/har.py	/^    model = pblm.har_500_model().cuda()$/;"	v
+model	examples/mnist.py	/^    model = [select_model(args.model)]$/;"	v
+model	examples/mnist_epsilon.py	/^        model = pblm.cifar_model().cuda()$/;"	v
+model	examples/mnist_epsilon.py	/^        model = pblm.mnist_model().cuda()$/;"	v
+model	examples/mnist_epsilon.py	/^        model = pblm.svhn_model().cuda()$/;"	v
+model	examples/primal.py	/^        model = pblm.mnist_model().cuda()$/;"	v
+model	examples/primal.py	/^        model = pblm.svhn_model().cuda()$/;"	v
+model	examples/svhn.py	/^    model = pblm.svhn_model().cuda()$/;"	v
+model_deep	examples/problems.py	/^def model_deep(in_ch, out_width, k, n1=8, n2=16, linear_size=100): $/;"	f
+model_wide	examples/problems.py	/^def model_wide(in_ch, out_width, k): $/;"	f
+momentum	examples/cifar.py	/^                            momentum=args.momentum,$/;"	v
+momentum	examples/mnist.py	/^                            momentum=args.momentum,$/;"	v
+name	setup.py	/^    name='convex_adversarial',$/;"	v
+next	examples/runtime.py	/^    def next(self): $/;"	m	class:Meter
+nn	build/lib/convex_adversarial/dual.py	/^import torch.nn as nn$/;"	i
+nn	build/lib/convex_adversarial/dual_inputs.py	/^import torch.nn as nn$/;"	i
+nn	build/lib/convex_adversarial/dual_layers.py	/^import torch.nn as nn$/;"	i
+nn	build/lib/convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+nn	build/lib/convex_adversarial/dual_network.py	/^import torch.nn as nn$/;"	i
+nn	build/lib/convex_adversarial/utils.py	/^import torch.nn as nn$/;"	i
+nn	convex_adversarial/dual.py	/^import torch.nn as nn$/;"	i
+nn	convex_adversarial/dual_inputs.py	/^import torch.nn as nn$/;"	i
+nn	convex_adversarial/dual_layers.py	/^import torch.nn as nn$/;"	i
+nn	convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+nn	convex_adversarial/dual_network.py	/^import torch.nn as nn$/;"	i
+nn	convex_adversarial/utils.py	/^import torch.nn as nn$/;"	i
+nn	examples/attacks.py	/^import torch.nn as nn$/;"	i
+nn	examples/cifar.py	/^import torch.nn as nn$/;"	i
+nn	examples/cifar.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/cifar_evaluate.py	/^import torch.nn as nn$/;"	i
+nn	examples/cifar_evaluate.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/fashion_mnist.py	/^import torch.nn as nn$/;"	i
+nn	examples/fashion_mnist.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/har.py	/^import torch.nn as nn$/;"	i
+nn	examples/har.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/mnist.py	/^import torch.nn as nn$/;"	i
+nn	examples/mnist.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/mnist_epsilon.py	/^import torch.nn as nn$/;"	i
+nn	examples/mnist_epsilon.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/primal.py	/^import torch.nn as nn$/;"	i
+nn	examples/primal.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/problems.py	/^import torch.nn as nn$/;"	i
+nn	examples/problems.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/runtime.py	/^import torch.nn as nn$/;"	i
+nn	examples/svhn.py	/^import torch.nn as nn$/;"	i
+nn	examples/svhn.py	/^import torch.nn.functional as F$/;"	i
+nn	examples/trainer.py	/^import torch.nn as nn$/;"	i
+norm_type	examples/cifar.py	/^                                                  norm_type=args.norm_test, **kwargs)$/;"	v
+np	build/lib/convex_adversarial/utils.py	/^import numpy as np$/;"	i
+np	convex_adversarial/utils.py	/^import numpy as np$/;"	i
+np	examples/fashion_mnist.py	/^import numpy as np$/;"	i
+np	examples/mnist.py	/^import numpy as np$/;"	i
+np	examples/primal.py	/^import numpy as np$/;"	i
+np	examples/problems.py	/^import numpy as np$/;"	i
+np	examples/runtime.py	/^import numpy as np$/;"	i
+np	examples/trainer.py	/^import numpy as np$/;"	i
+num_classes	examples/mnist_epsilon.py	/^    num_classes = model[-1].out_features$/;"	v
+num_classes	examples/primal.py	/^    num_classes = model[-1].out_features$/;"	v
+numpy	examples/cifar.py	/^import numpy$/;"	i
+numpy	examples/cifar_evaluate.py	/^import numpy$/;"	i
+objective	build/lib/convex_adversarial/dual.py	/^    def objective(self, *nus): $/;"	m	class:DualObject
+objective	build/lib/convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:InfBall
+objective	build/lib/convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:InfBallBounded
+objective	build/lib/convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:L2Ball
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualBatchNorm2d
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualDense
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualLinear
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualReLU
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualReshape
+objective	build/lib/convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:Identity
+objective	convex_adversarial/dual.py	/^    def objective(self, *nus): $/;"	m	class:DualObject
+objective	convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:InfBall
+objective	convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:InfBallBounded
+objective	convex_adversarial/dual_inputs.py	/^    def objective(self, *nus): $/;"	m	class:L2Ball
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualBatchNorm2d
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualDense
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualLinear
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualReLU
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:DualReshape
+objective	convex_adversarial/dual_layers.py	/^    def objective(self, *nus): $/;"	m	class:Identity
+opt	examples/cifar.py	/^            opt = optim.Adam(model[-1].parameters(), lr=args.lr)$/;"	v
+opt	examples/cifar.py	/^            opt = optim.SGD(model[-1].parameters(), lr=args.lr, $/;"	v
+opt	examples/fashion_mnist.py	/^    opt = optim.Adam(model.parameters(), lr=args.lr)$/;"	v
+opt	examples/har.py	/^    opt = optim.Adam(model.parameters(), lr=args.lr)$/;"	v
+opt	examples/mnist.py	/^            opt = optim.Adam(model[-1].parameters(), lr=args.lr)$/;"	v
+opt	examples/mnist.py	/^            opt = optim.SGD(model[-1].parameters(), lr=args.lr, $/;"	v
+opt	examples/svhn.py	/^    opt = optim.Adam(model.parameters(), lr=args.lr)$/;"	v
+optim	build/lib/convex_adversarial/dual_network.py	/^import torch.optim as optim$/;"	i
+optim	convex_adversarial/dual_network.py	/^import torch.optim as optim$/;"	i
+optim	examples/attacks.py	/^import torch.optim as optim$/;"	i
+optim	examples/cifar.py	/^import torch.optim as optim$/;"	i
+optim	examples/cifar_evaluate.py	/^import torch.optim as optim$/;"	i
+optim	examples/fashion_mnist.py	/^import torch.optim as optim$/;"	i
+optim	examples/har.py	/^import torch.optim as optim$/;"	i
+optim	examples/mnist.py	/^import torch.optim as optim$/;"	i
+optim	examples/mnist_epsilon.py	/^import torch.optim as optim$/;"	i
+optim	examples/primal.py	/^import torch.optim as optim$/;"	i
+optim	examples/problems.py	/^import torch.optim as optim$/;"	i
+optim	examples/runtime.py	/^import torch.optim as optim$/;"	i
+optim	examples/svhn.py	/^import torch.optim as optim$/;"	i
+optim	examples/trainer.py	/^import torch.optim as optim$/;"	i
+os	examples/problems.py	/^import os$/;"	i
+os	run.py	/^import os$/;"	i
+out	examples/mnist_epsilon.py	/^        out = Variable(model(X).data.max(1)[1])$/;"	v
+p	examples/runtime.py	/^    p = np.random.uniform(size=(1,28,28))$/;"	v
+p_lower	build/lib/convex_adversarial/utils.py	/^def p_lower(epsilon, k): $/;"	f
+p_lower	convex_adversarial/utils.py	/^def p_lower(epsilon, k): $/;"	f
+p_upper	build/lib/convex_adversarial/utils.py	/^def p_upper(epsilon, k): $/;"	f
+p_upper	convex_adversarial/utils.py	/^def p_upper(epsilon, k): $/;"	f
+packages	setup.py	/^    packages=['convex_adversarial'],$/;"	v
+parser	examples/fashion_mnist.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	examples/har.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	examples/mnist_epsilon.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	examples/primal.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	examples/svhn.py	/^    parser = argparse.ArgumentParser()$/;"	v
+parser	run.py	/^    parser = argparse.ArgumentParser()$/;"	v
+pblm	examples/cifar.py	/^import problems as pblm$/;"	i
+pblm	examples/cifar_evaluate.py	/^import problems as pblm$/;"	i
+pblm	examples/fashion_mnist.py	/^import problems as pblm$/;"	i
+pblm	examples/har.py	/^import problems as pblm$/;"	i
+pblm	examples/mnist.py	/^import problems as pblm$/;"	i
+pblm	examples/mnist_epsilon.py	/^import problems as pblm$/;"	i
+pblm	examples/primal.py	/^import problems as pblm$/;"	i
+pblm	examples/svhn.py	/^import problems as pblm$/;"	i
+pgd	examples/attacks.py	/^def pgd(loader, model, epsilon, niters=100, alpha=0.01, verbose=False,$/;"	f
+platforms	setup.py	/^    platforms=['any'],$/;"	v
+primal_values	examples/primal.py	/^            primal_values = []$/;"	v
+r	examples/runtime.py	/^r = 0.16$/;"	v
+random	examples/cifar.py	/^import random$/;"	i
+random	examples/cifar_evaluate.py	/^import random$/;"	i
+replace_10_with_0	examples/problems.py	/^def replace_10_with_0(y): $/;"	f
+requires_grad	examples/mnist_epsilon.py	/^                                    requires_grad=True)$/;"	v
+requires_grad	examples/mnist_epsilon.py	/^               requires_grad=True)$/;"	v
+reset	examples/trainer.py	/^    def reset(self):$/;"	m	class:AverageMeter
+robust_loss	build/lib/convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+robust_loss	build/lib/convex_adversarial/dual_network.py	/^def robust_loss(net, epsilon, X, y, $/;"	f
+robust_loss	convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+robust_loss	convex_adversarial/dual_network.py	/^def robust_loss(net, epsilon, X, y, $/;"	f
+robust_loss	examples/attacks.py	/^from convex_adversarial import robust_loss$/;"	i
+robust_loss	examples/runtime.py	/^from convex_adversarial import robust_loss$/;"	i
+robust_loss	examples/trainer.py	/^from convex_adversarial import robust_loss, robust_loss_parallel$/;"	i
+robust_loss_cascade	examples/trainer.py	/^def robust_loss_cascade(models, epsilon, X, y, **kwargs): $/;"	f
+robust_loss_parallel	build/lib/convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+robust_loss_parallel	build/lib/convex_adversarial/dual_network.py	/^def robust_loss_parallel(net, epsilon, X, y, proj=None, $/;"	f
+robust_loss_parallel	convex_adversarial/__init__.py	/^from .dual_network import DualNetBounds, robust_loss, robust_loss_parallel, DualNetwork$/;"	i
+robust_loss_parallel	convex_adversarial/dual_network.py	/^def robust_loss_parallel(net, epsilon, X, y, proj=None, $/;"	f
+robust_loss_parallel	examples/trainer.py	/^from convex_adversarial import robust_loss, robust_loss_parallel$/;"	i
+sampler_indices	examples/cifar.py	/^    sampler_indices = []$/;"	v
+sampler_indices	examples/mnist.py	/^    sampler_indices = []$/;"	v
+sampler_robust_cascade	examples/trainer.py	/^def sampler_robust_cascade(loader, models, epsilon, batch_size, **kwargs): $/;"	f
+save	examples/runtime.py	/^    def save(self, fname): $/;"	m	class:Meter
+select_input	build/lib/convex_adversarial/dual_inputs.py	/^def select_input(X, epsilon, proj, norm, bounded_input):$/;"	f
+select_input	build/lib/convex_adversarial/dual_network.py	/^from .dual_inputs import select_input$/;"	i
+select_input	convex_adversarial/dual_inputs.py	/^def select_input(X, epsilon, proj, norm, bounded_input):$/;"	f
+select_input	convex_adversarial/dual_network.py	/^from .dual_inputs import select_input$/;"	i
+select_layer	build/lib/convex_adversarial/dual_layers.py	/^def select_layer(layer, dual_net, X, proj, norm_type, in_f, out_f, zsi,$/;"	f
+select_layer	build/lib/convex_adversarial/dual_network.py	/^from .dual_layers import select_layer$/;"	i
+select_layer	convex_adversarial/dual_layers.py	/^def select_layer(layer, dual_net, X, proj, norm_type, in_f, out_f, zsi,$/;"	f
+select_layer	convex_adversarial/dual_network.py	/^from .dual_layers import select_layer$/;"	i
+select_model	examples/cifar.py	/^def select_model(m): $/;"	f
+select_model	examples/cifar_evaluate.py	/^def select_model(m): $/;"	f
+select_model	examples/mnist.py	/^def select_model(m): $/;"	f
+setGPU	examples/primal.py	/^import setGPU$/;"	i
+set_start	build/lib/convex_adversarial/dual_network.py	/^    def set_start(self, i): $/;"	m	class:InputSequential
+set_start	convex_adversarial/dual_network.py	/^    def set_start(self, i): $/;"	m	class:InputSequential
+setproctitle	examples/cifar.py	/^import setproctitle$/;"	i
+setproctitle	examples/cifar_evaluate.py	/^import setproctitle$/;"	i
+setproctitle	examples/fashion_mnist.py	/^import setproctitle$/;"	i
+setproctitle	examples/har.py	/^import setproctitle$/;"	i
+setproctitle	examples/mnist.py	/^import setproctitle$/;"	i
+setproctitle	examples/mnist_epsilon.py	/^import setproctitle$/;"	i
+setproctitle	examples/primal.py	/^import setproctitle$/;"	i
+setproctitle	examples/svhn.py	/^import setproctitle$/;"	i
+setup	setup.py	/^from setuptools import find_packages, setup$/;"	i
+subprocess	run.py	/^import subprocess$/;"	i
+svhn_loaders	examples/problems.py	/^def svhn_loaders(batch_size): $/;"	f
+svhn_model	examples/problems.py	/^def svhn_model(): $/;"	f
+sys	examples/problems.py	/^import sys$/;"	i
+sys	examples/runtime.py	/^import sys$/;"	i
+td	examples/har.py	/^import torch.utils.data as td$/;"	i
+td	examples/problems.py	/^import torch.utils.data as td$/;"	i
+test_log	examples/cifar.py	/^    test_log = open(args.prefix + "_test.log", "w")$/;"	v
+test_log	examples/cifar_evaluate.py	/^    test_log = open(args.output, "w")$/;"	v
+test_log	examples/fashion_mnist.py	/^    test_log = open(args.prefix + "_test.log", "w")$/;"	v
+test_log	examples/har.py	/^    test_log = open(args.prefix + "_test.log", "w")$/;"	v
+test_log	examples/mnist.py	/^    test_log = open(args.prefix + "_test.log", "w")$/;"	v
+test_log	examples/svhn.py	/^    test_log = open(args.prefix + "_test.log", "w")$/;"	v
+time	build/lib/convex_adversarial/utils.py	/^import time$/;"	i
+time	convex_adversarial/utils.py	/^import time$/;"	i
+time	examples/runtime.py	/^import time$/;"	i
+time	examples/trainer.py	/^import time$/;"	i
+torch	build/lib/convex_adversarial/dual.py	/^import torch.nn as nn$/;"	i
+torch	build/lib/convex_adversarial/dual_inputs.py	/^import torch$/;"	i
+torch	build/lib/convex_adversarial/dual_inputs.py	/^import torch.nn as nn$/;"	i
+torch	build/lib/convex_adversarial/dual_layers.py	/^import torch$/;"	i
+torch	build/lib/convex_adversarial/dual_layers.py	/^import torch.nn as nn$/;"	i
+torch	build/lib/convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+torch	build/lib/convex_adversarial/dual_network.py	/^import torch$/;"	i
+torch	build/lib/convex_adversarial/dual_network.py	/^import torch.nn as nn$/;"	i
+torch	build/lib/convex_adversarial/dual_network.py	/^import torch.optim as optim$/;"	i
+torch	build/lib/convex_adversarial/utils.py	/^import torch.nn as nn$/;"	i
+torch	convex_adversarial/dual.py	/^import torch.nn as nn$/;"	i
+torch	convex_adversarial/dual_inputs.py	/^import torch$/;"	i
+torch	convex_adversarial/dual_inputs.py	/^import torch.nn as nn$/;"	i
+torch	convex_adversarial/dual_layers.py	/^import torch$/;"	i
+torch	convex_adversarial/dual_layers.py	/^import torch.nn as nn$/;"	i
+torch	convex_adversarial/dual_layers.py	/^import torch.nn.functional as F$/;"	i
+torch	convex_adversarial/dual_network.py	/^import torch$/;"	i
+torch	convex_adversarial/dual_network.py	/^import torch.nn as nn$/;"	i
+torch	convex_adversarial/dual_network.py	/^import torch.optim as optim$/;"	i
+torch	convex_adversarial/utils.py	/^import torch.nn as nn$/;"	i
+torch	examples/attacks.py	/^import torch$/;"	i
+torch	examples/attacks.py	/^import torch.nn as nn$/;"	i
+torch	examples/attacks.py	/^import torch.optim as optim$/;"	i
+torch	examples/cifar.py	/^import torch$/;"	i
+torch	examples/cifar.py	/^import torch.backends.cudnn as cudnn$/;"	i
+torch	examples/cifar.py	/^import torch.nn as nn$/;"	i
+torch	examples/cifar.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/cifar.py	/^import torch.optim as optim$/;"	i
+torch	examples/cifar_evaluate.py	/^import torch$/;"	i
+torch	examples/cifar_evaluate.py	/^import torch.backends.cudnn as cudnn$/;"	i
+torch	examples/cifar_evaluate.py	/^import torch.nn as nn$/;"	i
+torch	examples/cifar_evaluate.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/cifar_evaluate.py	/^import torch.optim as optim$/;"	i
+torch	examples/fashion_mnist.py	/^import torch$/;"	i
+torch	examples/fashion_mnist.py	/^import torch.nn as nn$/;"	i
+torch	examples/fashion_mnist.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/fashion_mnist.py	/^import torch.optim as optim$/;"	i
+torch	examples/har.py	/^import torch$/;"	i
+torch	examples/har.py	/^import torch.nn as nn$/;"	i
+torch	examples/har.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/har.py	/^import torch.optim as optim$/;"	i
+torch	examples/har.py	/^import torch.utils.data as td$/;"	i
+torch	examples/mnist.py	/^import torch$/;"	i
+torch	examples/mnist.py	/^import torch.backends.cudnn as cudnn$/;"	i
+torch	examples/mnist.py	/^import torch.nn as nn$/;"	i
+torch	examples/mnist.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/mnist.py	/^import torch.optim as optim$/;"	i
+torch	examples/mnist_epsilon.py	/^import torch$/;"	i
+torch	examples/mnist_epsilon.py	/^import torch.nn as nn$/;"	i
+torch	examples/mnist_epsilon.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/mnist_epsilon.py	/^import torch.optim as optim$/;"	i
+torch	examples/primal.py	/^import torch$/;"	i
+torch	examples/primal.py	/^import torch.nn as nn$/;"	i
+torch	examples/primal.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/primal.py	/^import torch.optim as optim$/;"	i
+torch	examples/problems.py	/^import torch$/;"	i
+torch	examples/problems.py	/^import torch.nn as nn$/;"	i
+torch	examples/problems.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/problems.py	/^import torch.optim as optim$/;"	i
+torch	examples/problems.py	/^import torch.utils.data as td$/;"	i
+torch	examples/runtime.py	/^import torch$/;"	i
+torch	examples/runtime.py	/^import torch.nn as nn$/;"	i
+torch	examples/runtime.py	/^import torch.optim as optim$/;"	i
+torch	examples/svhn.py	/^import torch$/;"	i
+torch	examples/svhn.py	/^import torch.nn as nn$/;"	i
+torch	examples/svhn.py	/^import torch.nn.functional as F$/;"	i
+torch	examples/svhn.py	/^import torch.optim as optim$/;"	i
+torch	examples/trainer.py	/^import torch$/;"	i
+torch	examples/trainer.py	/^import torch.nn as nn$/;"	i
+torch	examples/trainer.py	/^import torch.optim as optim$/;"	i
+torchvision	examples/attacks.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/attacks.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/cifar.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/cifar.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/cifar_evaluate.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/cifar_evaluate.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/fashion_mnist.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/fashion_mnist.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/har.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/har.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/mnist.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/mnist.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/mnist_epsilon.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/mnist_epsilon.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/primal.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/primal.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/problems.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/problems.py	/^import torchvision.transforms as transforms$/;"	i
+torchvision	examples/svhn.py	/^import torchvision.datasets as datasets$/;"	i
+torchvision	examples/svhn.py	/^import torchvision.transforms as transforms$/;"	i
+train_baseline	examples/trainer.py	/^def train_baseline(loader, model, opt, epoch, log, verbose):$/;"	f
+train_loader	examples/cifar.py	/^            train_loader = sampler_robust_cascade(train_loader, model, args.epsilon, $/;"	v
+train_loader	examples/mnist.py	/^            train_loader = sampler_robust_cascade(train_loader, model, args.epsilon,$/;"	v
+train_log	examples/cifar.py	/^    train_log = open(args.prefix + "_train.log", "w")$/;"	v
+train_log	examples/fashion_mnist.py	/^    train_log = open(args.prefix + "_train.log", "w")$/;"	v
+train_log	examples/har.py	/^    train_log = open(args.prefix + "_train.log", "w")$/;"	v
+train_log	examples/mnist.py	/^    train_log = open(args.prefix + "_train.log", "w")$/;"	v
+train_log	examples/svhn.py	/^    train_log = open(args.prefix + "_train.log", "w")$/;"	v
+train_madry	examples/trainer.py	/^def train_madry(loader, model, epsilon, opt, epoch, log, verbose):$/;"	f
+train_robust	examples/trainer.py	/^def train_robust(loader, model, opt, epsilon, epoch, log, verbose, $/;"	f
+transforms	examples/attacks.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/cifar.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/cifar_evaluate.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/fashion_mnist.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/har.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/mnist.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/mnist_epsilon.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/primal.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/problems.py	/^import torchvision.transforms as transforms$/;"	i
+transforms	examples/svhn.py	/^import torchvision.transforms as transforms$/;"	i
+uid	run.py	/^    uid = int(subprocess.run(['id', '-u'], stdout=subprocess.PIPE).stdout)$/;"	v
+unbatch	build/lib/convex_adversarial/dual_layers.py	/^def unbatch(A): $/;"	f
+unbatch	convex_adversarial/dual_layers.py	/^def unbatch(A): $/;"	f
+update	examples/trainer.py	/^    def update(self, val, n=1):$/;"	m	class:AverageMeter
+upper_bound	examples/primal.py	/^        upper_bound = -dual.g(Variable(C.cuda())).data$/;"	v
+url	setup.py	/^    url='https:\/\/github.com\/locuslab\/convex_adversarial',$/;"	v
+utils	examples/har.py	/^import torch.utils.data as td$/;"	i
+utils	examples/problems.py	/^import torch.utils.data as td$/;"	i
+version	setup.py	/^    version='0.4.1',$/;"	v
+waitGPU	examples/fashion_mnist.py	/^import waitGPU$/;"	i
+waitGPU	examples/mnist_epsilon.py	/^import waitGPU$/;"	i
+warnings	build/lib/convex_adversarial/dual_network.py	/^import warnings$/;"	i
+warnings	convex_adversarial/dual_network.py	/^import warnings$/;"	i
+weight_decay	examples/cifar.py	/^                            weight_decay=args.weight_decay)$/;"	v
+weight_decay	examples/mnist.py	/^                            weight_decay=args.weight_decay)$/;"	v
+x	examples/primal.py	/^            x = x.reshape(-1)$/;"	v
+x	examples/runtime.py	/^x = [np.random.uniform(size=(1,28,28))]$/;"	v
+y	examples/runtime.py	/^y = (torch.rand(m)+0.5).long().cuda()$/;"	v
+z	examples/primal.py	/^                z = [cp.Variable(l.in_features) for l in affine]$/;"	v
+zhat	examples/primal.py	/^                zhat = [cp.Variable(l.out_features) for l in affine]$/;"	v
+zl	examples/primal.py	/^            zl = [l.data[i0,:].cpu().numpy() for l in dual.zl]$/;"	v
+zu	examples/primal.py	/^            zu = [u.data[i0,:].cpu().numpy() for u in dual.zu]$/;"	v

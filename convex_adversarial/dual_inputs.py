@@ -22,15 +22,22 @@ def select_input(X, epsilon, proj, norm, bounded_input):
         raise ValueError("Unknown estimation type: {}".format(norm))
 
 class InfBall(DualObject):
-    def __init__(self, X, epsilon): 
+    def __init__(self, X, epsilon, nu_1=None, nu_x = None): 
         super(InfBall, self).__init__()
         self.epsilon = epsilon
+        if nu_1 is None:
+            n = X[0].numel()
+            self.nu_x = [X] 
+            self.nu_1 = [X.new(n,n)]
+            torch.eye(n, out=self.nu_1[0])
+            self.nu_1[0] = self.nu_1[0].view(-1,*X.size()[1:]).unsqueeze(0)
+        else:
+            self.nu_1 = nu_1
+            self.nu_x = nu_x
 
-        n = X[0].numel()
-        self.nu_x = [X] 
-        self.nu_1 = [X.new(n,n)]
-        torch.eye(n, out=self.nu_1[0])
-        self.nu_1[0] = self.nu_1[0].view(-1,*X.size()[1:]).unsqueeze(0)
+    def delmem(self):
+        del self.nu_1[:]
+        del self.nu_x[:]
 
     def apply(self, dual_layer): 
         self.nu_x.append(dual_layer(*self.nu_x))
@@ -85,6 +92,11 @@ class InfBallBounded(DualObject):
             self.nu_1 = nu_1
             self.nu_x = nu_x
             
+    def delmem(self):
+        del self.l
+        del self.u
+        del self.nu_1[:]
+        del self.nu_x[:]
 
     def apply(self, dual_layer): 
         self.nu_x.append(dual_layer(*self.nu_x))

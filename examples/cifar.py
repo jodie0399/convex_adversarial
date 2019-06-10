@@ -29,12 +29,18 @@ def select_model(m):
         model = pblm.cifar_model_large().cuda()
     elif m == 'resnet': 
         model = pblm.cifar_model_resnet(N=args.resnet_N, factor=args.resnet_factor).cuda()
+    elif m == 'm1':
+        print('using a reduced sized network')
+        model = pblm.cifar_model_m1().cuda()
+    elif m == 'm2':
+        print('using a slightly reduced sized network')
+        model = pblm.cifar_model_m2().cuda()
     else: 
         model = pblm.cifar_model().cuda() 
     return model
 
 if __name__ == "__main__": 
-    args = pblm.argparser(epsilon = 0.0347, starting_epsilon=0.001, batch_size = 50, 
+    args = pblm.argparser(epsilon = 0.0347, starting_epsilon=0.001, batch_size = 30, 
                 opt='sgd', lr=0.05)
 
     print("saving file to {}".format(args.prefix))
